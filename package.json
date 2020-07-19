@@ -1,5 +1,5 @@
 {
-  "name": "B-Day-Popper",
+  "name": "b_day_popper",
   "version": "1.0.0",
   "description": "Discord bot for member birthday celebrator",
   "main": "index.js",
