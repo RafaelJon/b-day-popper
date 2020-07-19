@@ -1,4 +1,5 @@
 module.exports = {
   Help: require('./help'),
-  Add: require('./add')
+  Add: require('./add'),
+  Edit: require('./edit')
 };

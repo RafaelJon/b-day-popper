@@ -13,14 +13,14 @@ Discord bot for member birthday celebrator!
   Add new birthday, ex: ~add John 2000-10-10 +8.
   <br /><br />
   
-  > ~edit [NAME] [YYYY-MM-DD] [TimeZone]
+  > ~edit [ID] [NAME] [YYYY-MM-DD] [TimeZone]
   
-  Update added person birthdate, ex: ~edit John 2000-10-10 +8.
+  Update added person birthdate, ex: ~edit 1 John 2000-10-10 +8.
   <br /><br />
 
-  > ~delete [NAME]
+  > ~delete [ID]
   
-  Delete added name birthdate, ex: ~delete John.
+  Delete added name birthdate, ex: ~delete 1.
   <br /><br />
 
   > ~celebrate

@@ -17,13 +17,13 @@ module.exports = {
           value: "Add new birth date, ex: ~add John 2000-10-10 +8. \n\u200B",
         },
         {
-          name: "~edit [Name] [YYYY-MM-DD] [TimeZone]",
+          name: "~edit [ID] [Name] [YYYY-MM-DD] [TimeZone]",
           value:
-            "Update added person birth date, ex: ~edit John 2000-10-10 +8.\n\u200B",
+            "Update added person birth date, ex: ~edit 1 John 2000-10-10 +8.\n\u200B",
         },
         {
-          name: "~delete [Name]",
-          value: "Delete added person birth date, ex: ~delete John.\n\u200B",
+          name: "~delete [ID]",
+          value: "Delete added person birth date, ex: ~delete 1.\n\u200B",
         },
         { name: "~celebrate", value: "Get all server birthday list!" },
         { name: "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀", value: "\u200B" },

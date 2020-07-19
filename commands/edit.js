@@ -1,47 +1,55 @@
 module.exports = {
-  name: "~add",
-  description: "Add new birthday!",
+  name: "~edit",
+  description: "Edit existing birthday!",
   execute(msg, args, db, Discord) {
     let MessageEmbed;
     let err = false;
     let str = msg.content.split(" ");
 
-    if (str.length != 4) {
+    if (str.length != 5) {
       err = true;
-    } else if (!new Date(str[2])) {
+    } else if (!parseInt(str[1])) {
       err = true;
-    } else if (!parseInt(str[3])) {
+    } else if (!new Date(str[3])) {
+      err = true;
+    } else if (!parseInt(str[4])) {
       err = true;
     }
 
     if (err) {
       MessageEmbed = new Discord.MessageEmbed()
         .setColor("#F93753")
-        .setTitle("Insert new birthday failed!🎈🎈🎈")
+        .setTitle("Update existing birthday failed!🎈🎈🎈")
         .setDescription("\u200B\nInputted data is invalid.");
       msg.channel.send(MessageEmbed);
     } else {
-      db.Birthday.findOrCreate({
-        where: {
-          name: str[1],
-          birthdate: str[2],
-          timezone: parseInt(str[3]),
-          channelId: msg.channel.guild.id,
-        },
-      })
+      db.Birthday.findByPk(str[1])
+        .then((birthday) => {
+          // Check if record exists in db
+          console.log(birthday);
+          if (birthday == null) {
+            throw new Error("Birthday not found!");
+          } else {
+            return birthday.update({
+              name: str[2],
+              birthdate: str[3],
+              timezone: parseInt(str[4]),
+            });
+          }
+        })
         .then(() => {
           MessageEmbed = new Discord.MessageEmbed()
             .setColor("#20B2AA")
-            .setTitle("Insert new birthday success!🎈🎈🎈\n\u200B")
+            .setTitle("Update existing birthday success!🎈🎈🎈\n\u200B")
             .addFields(
               {
                 name: "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄",
                 value: "\n\u200B",
               },
               { name: "Birthday Detail", value: "\n\u200B" },
-              { name: "Name:", value: str[1] },
-              { name: "Birth Date:", value: str[2] },
-              { name: "Time Zone:", value: str[3] },
+              { name: "Name:", value: str[2] },
+              { name: "Birth Date:", value: str[3] },
+              { name: "Time Zone:", value: str[4] },
               {
                 name: "\u200B",
                 value: "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n\u200B",
@@ -52,8 +60,8 @@ module.exports = {
         .catch((err) => {
           MessageEmbed = new Discord.MessageEmbed()
             .setColor("#F93753")
-            .setTitle("Insert new birthday failed!🎈🎈🎈")
-            .setDescription("\u200B\nFailed to insert birthday!");
+            .setTitle("Edit birthday failed!🎈🎈🎈")
+            .setDescription("\u200B\n "+err);
           msg.channel.send(MessageEmbed);
         });
     }
