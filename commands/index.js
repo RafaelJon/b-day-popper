@@ -1,5 +1,6 @@
 module.exports = {
   Help: require('./help'),
   Add: require('./add'),
-  Edit: require('./edit')
+  Edit: require('./edit'),
+  Celebrate: require('./celebrate')
 };

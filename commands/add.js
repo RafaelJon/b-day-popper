@@ -8,6 +8,8 @@ module.exports = {
 
     if (str.length != 4) {
       err = true;
+    } else if (str[1].length < 0 && str[1].length < 20) {
+      err = true;
     } else if (!new Date(str[2])) {
       err = true;
     } else if (!parseInt(str[3])) {
