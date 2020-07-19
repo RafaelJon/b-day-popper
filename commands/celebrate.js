@@ -6,7 +6,7 @@ module.exports = {
       let MessageEmbed = new Discord.MessageEmbed()
         .setColor("#20B2AA")
         .setTitle("Birthday List!🎈🎈🎈")
-        .addField("\n\u200B", "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+        .addField("\n\u200B", "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
       birthday.forEach((bday) => {
         let date = new Date(bday.dataValues.birthdate).getDate();
         let month = new Date(bday.dataValues.birthdate).getMonth();
