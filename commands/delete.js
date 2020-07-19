@@ -43,7 +43,7 @@ module.exports = {
           MessageEmbed = new Discord.MessageEmbed()
             .setColor("#F93753")
             .setTitle("Delete birthday failed!🎈🎈🎈")
-            .setDescription("\u200B\n "+ err);
+            .setDescription("\u200B\n " + err);
           msg.channel.send(MessageEmbed);
         });
     }

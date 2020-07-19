@@ -9,7 +9,7 @@ module.exports = {
         "Birthday Bot for discord with active celebration according to timezone."
       )
       .addFields(
-        { name: "\u200B", value: "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄" },
+        { name: "\u200B", value: "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄" },
         { name: "Command List ⚙", value: "All B Day Popper command list" },
         { name: "~help", value: "View all command list.\n\u200B" },
         {
@@ -26,7 +26,7 @@ module.exports = {
           value: "Delete added person birth date, ex: ~delete 1.\n\u200B",
         },
         { name: "~celebrate", value: "Get all server birthday list!" },
-        { name: "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀", value: "\u200B" },
+        { name: "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀", value: "\u200B" },
         { name: "More commands to be added!", value: "....." }
       );
 
