@@ -24,9 +24,9 @@ Discord bot for member birthday celebrator!
   <br /><br />
 
   > ~celebrate
-  <br /><br />
-
+  
   Get all channel birthday list! 
-
+  <br /><br />
+  
 # Add Bot
 [Link To add bot to server!](https://discord.com/api/oauth2/authorize?client_id=734346199116677182&permissions=100352&scope=bot)
