@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 const botCommands = require('./commands');
+const db = require('./models/index.js');
 
 Object.keys(botCommands).map(key => {
   bot.commands.set(botCommands[key].name, botCommands[key]);
@@ -24,7 +25,7 @@ bot.on('message', msg => {
   if (!bot.commands.has(command)) return;
 
   try {
-    bot.commands.get(command).execute(msg, args, "db", Discord);
+    bot.commands.get(command).execute(msg, args, db, Discord);
   } catch (error) {
     console.error(error);
     msg.reply('there was an error trying to execute that command!');
