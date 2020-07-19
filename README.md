@@ -6,25 +6,25 @@ Discord bot for member birthday celebrator!
   > ~help
   
   View all command list.
+  <br /><br />
   
-
   > ~add [NAME] [YYYY-MM-DD] [TimeZone]
-  
+
   Add new birthday, ex: ~add John 2000-10-10 +8.
-
-
+  <br /><br />
+  
   > ~edit [NAME] [YYYY-MM-DD] [TimeZone]
   
   Update added person birthdate, ex: ~edit John 2000-10-10 +8.
-
+  <br /><br />
 
   > ~delete [NAME]
   
   Delete added name birthdate, ex: ~delete John.
-
+  <br /><br />
 
   > ~celebrate
-
+  <br /><br />
 
   Get all channel birthday list!
   
