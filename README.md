@@ -31,7 +31,7 @@ Status: Currently Down(Under Maintenance)
   <br /><br />
   
 # Add Bot
-<br />
+
 Status: Currently Down(Under Maintenance)
-<br />
 [Link To add bot to server!](https://discord.com/api/oauth2/authorize?client_id=734346199116677182&permissions=100352&scope=bot)
+<br />
