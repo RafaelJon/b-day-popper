@@ -1,6 +1,7 @@
 # B-Day-Popper
 
 Discord bot for member birthday celebrator!
+Status: Currently Down(Under Maintenance)
 
 # Command List
   > ~help
